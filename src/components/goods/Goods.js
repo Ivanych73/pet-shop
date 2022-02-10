@@ -1,5 +1,7 @@
 import Card from "../card/Card"
 
+const CARDS_PER_LINE = 3;
+
 function Goods(props) {
     const goodCards = props.goods.map((good, index) => 
         <div className="col-sm-4 py-3 px-3" key={index}>
@@ -10,12 +12,10 @@ function Goods(props) {
     let i = 0;
     let strGoods = [];
     while (i< goodCards.length) {
-        strGoods.push(goodCards[i]);
-        i++;
-        strGoods.push(goodCards[i]);
-        i++;
-        strGoods.push(goodCards[i]);
-        i++;
+        for (let j=0; j<CARDS_PER_LINE; j++) {
+            strGoods.push(goodCards[i]);
+            i++;
+        }
         gridGoods.push(strGoods);
         strGoods = [];
     }
