@@ -1,3 +1,5 @@
+import propTypes from "prop-types";
+
 function Card (props) {
     const detailHref = `index.php?path=detail/${props.good.goodId}`;
     const editHref = `index.php?path=admin/editgood/${props.good.goodId}`;
@@ -26,3 +28,7 @@ function Card (props) {
 }
 
 export default Card;
+
+Card.propTypes = {
+    good: propTypes.object,
+}

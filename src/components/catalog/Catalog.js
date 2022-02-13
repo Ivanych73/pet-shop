@@ -1,4 +1,5 @@
 import Goods from "../goods/Goods";
+import propTypes from "prop-types";
 
 function Catalog(props) {
     return(
@@ -24,3 +25,7 @@ function Catalog(props) {
 }
 
 export default Catalog
+
+Goods.propTypes = {
+    goods: propTypes.array,
+}

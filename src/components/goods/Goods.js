@@ -1,4 +1,5 @@
 import Card from "../card/Card"
+import propTypes from "prop-types"
 
 function Goods(props) {
     const goods = props.goods.map((good, index) => 
@@ -15,3 +16,7 @@ function Goods(props) {
 }
 
 export default Goods
+
+Goods.propTypes = {
+    goods: propTypes.array,
+}
