@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import {GetCatalog} from "../../data/GetCatalog";
-import Catalog from "../catalog/Catalog";
-import { Detail } from "../detail/detail";
+import {getCatalog} from "../../data/getdata";
+import Catalog from "../catalog/catalog";
+import { Detail } from "../catalog/goods/detail/detail";
 import { Header } from "../header/header";
 
 export const Routing = () => {
-    const goods = GetCatalog();
+    const goods = getCatalog();
     return (  
         <BrowserRouter>
             <Header />

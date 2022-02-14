@@ -1,4 +1,4 @@
-import Card from "../card/Card"
+import Card from "./card/card"
 import propTypes from "prop-types"
 
 function Goods(props) {

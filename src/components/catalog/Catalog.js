@@ -1,4 +1,4 @@
-import Goods from "../goods/Goods";
+import Goods from "./goods/goods";
 import propTypes from "prop-types";
 
 function Catalog(props) {

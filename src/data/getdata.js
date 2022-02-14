@@ -64,7 +64,7 @@ const goods = [
     }
 ]
 
-export const GetCatalog = () => {
+export const getCatalog = () => {
     return goods
 }
 
