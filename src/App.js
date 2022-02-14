@@ -1,12 +1,10 @@
 import './App.css';
-import Catalog from './components/catalog/Catalog';
-import GetCatalog from './data/GetCatalog';
+import {Routing} from './components/routes/routes';
 
 function App() {
-  const goods = GetCatalog();
-  return (  
-      <Catalog goods={goods} />
-  );
+  return (
+    <Routing />
+  )
 }
 
 export default App;
