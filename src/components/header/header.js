@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-export const Header = () => {
+export const Header = (props) => {
     return (
         <header className="p-3 bg-dark text-white">
             <div className="container">
@@ -18,14 +18,10 @@ export const Header = () => {
                         </li>
                     </ul>
 
-                    {/* <div className="text-end d-flex align-items-center">
-                        {% if links.loginMessage %}
-                            <p className="text-muted me-2">{{ links.loginMessage }}</p>
-                        {% endif %}
-                        {% if links.loginLink %}
-                            <a className="btn btn-outline-light me-2" href="{{links.loginLink.href}}">{{links.loginLink.text}}</a>
-                        {% endif %}
-                        {% if links.personalLink %}
+                    <div className="text-end d-flex align-items-center">
+                        <p className="text-muted me-2">{ props.headerLinks.loginMessage }</p>
+                        <Link to="/login" className="btn btn-outline-light me-2">{props.headerLinks.loginLink.text}</Link>
+{/*                        {% if links.personalLink %}
                             <a className="btn btn-outline-light me-2" href="{{links.personalLink.href}}">{{links.personalLink.text}}</a>
                         {% endif %}
                         {% if links.adminLink %}
@@ -40,10 +36,9 @@ export const Header = () => {
                             </div>
                         </div>
                         {% endif %}
-                        {% if links.regLink %}
-                        <a className="btn btn-warning" href="{{links.regLink.href}}">Зарегистрироваться</a>
-                        {% endif %}
-                    </div> */}
+                     */}
+                        <Link to="/register" className="btn btn-warning">Зарегистрироваться</Link>
+                    </div>
                 </div>
             </div>
         </header>
